@@ -28,9 +28,21 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/css/material-kit.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery.min.js",
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/material.min.js",
+              "src/assets/js/moment.min.js",
+              "src/assets/js/nouislider.min.js",
+              "src/assets/js/bootstrap-datetimepicker.js",
+              "src/assets/js/bootstrap-selectpicker.js",
+              "src/assets/js/bootstrap-tagsinput.js",
+              "src/assets/js/jasny-bootstrap.min.js",
+              "src/assets/js/material-kit.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -123,6 +135,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "myApp01"
+    }
+  },
+  "defaultProject": "myApp01",
+  "cli": {
+    "analytics": "7ec6c696-5382-4bb5-92fc-2d7bdb0e62a5"
+  }
 }
