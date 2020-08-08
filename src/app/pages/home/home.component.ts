@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-declare var $, BrowserDetect:any;
+declare var $, materialKitDemo, big_image, window_width, BrowserDetect:any;
 
 @Component({
   selector: 'app-home',
@@ -21,8 +21,16 @@ export class HomeComponent implements OnInit {
  
       // Active Carousel
     $('.carousel').carousel({
-        interval: 3000
+        interval: 5000
       });
+
+      if (window_width >= 768){
+        big_image = $('.page-header[data-parallax="true"]');
+        if(big_image.length != 0){
+           $(window).on('scroll', materialKitDemo.checkScrollForParallax);
+        }
+
+    }
       
   });
     

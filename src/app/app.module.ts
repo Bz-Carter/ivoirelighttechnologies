@@ -13,6 +13,7 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { ClientsComponent } from './pages/clients/clients.component';
 import { NavbarComponent } from './layouts/navbar/navbar.component';
 import { FooterComponent } from './layouts/footer/footer.component';
+import { CarouselComponent } from './pages/carousel/carousel.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { FooterComponent } from './layouts/footer/footer.component';
     BlogComponent,
     ClientsComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
