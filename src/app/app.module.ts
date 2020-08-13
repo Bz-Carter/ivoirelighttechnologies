@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,8 @@ import { ClientsComponent } from './pages/clients/clients.component';
 import { NavbarComponent } from './layouts/navbar/navbar.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { CarouselComponent } from './pages/carousel/carousel.component';
+import { SpinnerComponent } from './layouts/spinner/spinner.component';
+
 
 
 @NgModule({
@@ -29,11 +32,13 @@ import { CarouselComponent } from './pages/carousel/carousel.component';
     ClientsComponent,
     NavbarComponent,
     FooterComponent,
-    CarouselComponent
+    CarouselComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LoadingBarRouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
