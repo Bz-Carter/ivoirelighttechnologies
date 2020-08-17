@@ -1,0 +1,17 @@
+.error-page .title {
+  font-size: 12em;
+  color: #ffffff;
+  letter-spacing: 14px;
+  font-weight: 700; }
+
+  .page-header .content-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #FFFFFF;
+    padding: 0 15px;
+    width: 100%;
+    max-width: 880px; }

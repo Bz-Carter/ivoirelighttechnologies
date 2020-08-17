@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
 declare var $: any;
@@ -12,6 +12,7 @@ declare var $: any;
 export class AppComponent implements OnInit, OnDestroy {
 
   subscription: Subscription;
+  show: boolean = true;
 
   constructor(private router: Router){}
 
@@ -21,6 +22,13 @@ export class AppComponent implements OnInit, OnDestroy {
       filter(event => event instanceof NavigationEnd)
     )
     .subscribe(() => window.scrollTo(0, 0));
+
+    this.router.events
+        .subscribe((event) => {
+            if ( event instanceof NavigationStart ) {
+              $('html').removeClass('nav-open');
+            }
+        });
 
     var $section_features = '';
 		$().ready(function(){

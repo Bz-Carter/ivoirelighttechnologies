@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 
+//BackOfficeModule module
+import { BackOfficeModule } from './back-office/back-office.module';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -36,9 +39,10 @@ import { SpinnerComponent } from './layouts/spinner/spinner.component';
     SpinnerComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     LoadingBarRouterModule,
+    BackOfficeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
